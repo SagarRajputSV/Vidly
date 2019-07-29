@@ -1,0 +1,21 @@
+﻿@model Vidly.Models.Customer
+@{
+     ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ 
+    if(Model.CustomerName.Length.Equals(0))
+    {
+        <h3>There is No details of this customer</h3>
+    }
+
+    else
+    {
+        <h3>The details of the customer is as follows</h3>
+        <h4>Name:@Model.CustomerName</h4>
+        <h4>MembershipType:@Model.membershipType.MembershipName</h4>
+        <h4>BirthDate:@Model.BirthDate</h4>
+    }
+}
+
